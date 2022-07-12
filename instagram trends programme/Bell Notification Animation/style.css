@@ -1,0 +1,35 @@
+.icons-wrapper {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    background-color: gray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    max-width: 100%;
+}
+
+.icons-wrapper:hover .icon {
+    animation: shake 1s forwards;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+}

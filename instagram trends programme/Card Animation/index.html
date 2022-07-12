@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD Animation</title>
+    <style>
+        .conatiner {
+            display: grid;
+            place-items: center;
+            position: relative;
+            height: 150px;
+            width: 100px;
+            background: #191919;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .conatiner::before {
+            content: "";
+            width: 60px;
+            height: 300px;
+            left: 10px;
+            top: -70px;
+            position: absolute;
+            background:  linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+            animation: animate 5s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .conatiner::after{
+            content: "";
+            position: absolute;
+            background: #191919;
+            inset: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conatiner">
+        <span></span>
+    </div>
+</body>
+
+</html>

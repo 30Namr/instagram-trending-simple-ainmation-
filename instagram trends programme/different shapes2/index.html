@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different shpaes 2</title>
+    <style>
+        .shapes{
+            width: 40px;
+            height: 40px;
+            color: deeppink;
+            display: grid;
+        }
+
+        .shapes::before,
+        .shapes::after {
+            content: "";
+            grid-area: 1/1;
+            background: deeppink;
+            clip-path: polygon(0 0, 0% 100%, 51% 47%);
+            animation: spl  2s infinite;
+        }
+
+        .shapes::after {
+            animation-delay: -1.5s;
+            --s: 90deg;
+        }
+
+        @keyframes spl {
+
+            0%,
+            12% {
+                transform: rotate(var(--s, 0deg)) rotate(0deg);
+            }
+
+            37%,
+            62% {
+                transform: rotate(var(--s, 0deg)) rotate(-180deg);
+            }
+
+            87%,
+            100% {
+                transform: rotate(var(--s, 0deg)) rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shapes"></div>
+</body>
+
+</html>
+
+
+
+<!-- The grid-area property specifies a grid item's size and location in a grid layout,
+
+Property names that are prefixed with --, like --example-name, represent custom properties that contain a value that can be used in other declarations using the var() function.
+
+Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm. -->

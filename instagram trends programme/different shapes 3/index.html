@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>different shapes 3</title>
+    <style>
+        .shape {
+            width: 40px;
+            height: 40px;
+            color: purple;
+            display: grid;
+        }
+
+        .shape::before,
+        .shape::after {
+            content: "";
+            grid-area: 1/1;
+            background: currentColor;
+            clip-path: polygon(50% 0%, 10% 79%, 90% 80%);
+            animation: sp3 2s infinite;
+        }
+
+        .shape::after {
+            --s: -1, -1;
+        }
+
+        @keyframes sp3 {
+
+            0%,
+            10% {
+                transform: scale(var(--s, 1)) translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: scale(var(--s, 1)) translate(20px, 20px) rotate(0deg);
+            }
+
+            66% {
+                transform: scale(var(--s, 1)) translate(20px, -20px) rotate(180deg);
+            }
+
+            90%,
+            100% {
+                transform: scale(var(--s, 1)) translate(0px, 0px) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shape"></div>
+</body>
+
+</html>

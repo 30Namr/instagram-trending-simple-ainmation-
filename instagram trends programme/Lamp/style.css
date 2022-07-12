@@ -1,0 +1,41 @@
+.lamp-item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.lamp-top {
+    background: #2d2d2d;
+    height: 100px;
+    width: 10px;
+    top: 0;
+}
+
+.lamp-middle {
+    background: #2d2d2d;
+    border-radius: 50px 50px 0 0;
+    height: 30px;
+    width: 50px;
+    top: 100px;
+}
+
+.lamp-bottom {
+    background: #2d2d2d;
+    border-radius: 100px 100px 0 0;
+    cursor: pointer;
+    height: 80px;
+    width: 150px;
+    top: 120px;
+}
+
+.lamp-light.open {
+    background: yellow;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    height: 450px;
+    width: 250px;
+    position: absolute;
+    top: 200px;
+
+
+}

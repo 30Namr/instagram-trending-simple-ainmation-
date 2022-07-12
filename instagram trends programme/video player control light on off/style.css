@@ -1,0 +1,22 @@
+video {
+    position: relative;
+    z-index: 999;
+
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: none;
+}
+
+button {
+    font-size: 2rem;
+    padding: 5px 10px;
+    margin: 0 10px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 5px;
+}

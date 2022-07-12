@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different shapes 1</title>
+    <style>
+        .shape {
+            width: 40px;
+            height: 40px;
+            color: crimson;
+            background: conic-gradient(currentcolor 0 270deg, #0000 0);
+            border-radius: 50%;
+            animation: sp infinite linear;
+        }
+
+        .shape:before {
+            content: "";
+            display: block;
+            height: 50%;
+            width: 50%;
+            border-top-left-radius: 100px;
+            background: currentColor;
+            animation: sp4 0.5s infinite alternate;
+        }
+
+        @keyframes sp4 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(98deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes sp4 {
+            100% {
+                transform: translate(-10px, -10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shape"></div>
+</body>
+
+</html>
+
+
+<!-- A conic gradient is a gradient with color transitions rotated around a center point.
+
+To create a conic gradient you must define at least two colors.
+By default, angle is 0deg and position is center.
+
+If no degree is specified, the colors will be spread equally around the center point.
+
+
+The currentcolor keyword refers to the value of the color property of an element. -->
