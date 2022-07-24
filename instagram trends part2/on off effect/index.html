@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on /off effect    </title>
+    <style>
+        form {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-left: 10rem;
+        }
+
+        form::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 6rem;
+            height: 100%;
+            border-radius: 99em;
+            left: 0;
+            top: 50%;
+            border: 0.5rem solid #ccc;
+            transform: translateY(-50%);
+        }
+
+        input {
+            clip: rect(0 0 0 0);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 0.5px;
+        }
+
+        label {
+            font-size: 8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-left: -1.125em;
+            cursor: pointer;
+            position: relative;
+        }
+
+        label~label {
+            margin-top: 1rem;
+        }
+
+        label::first-letter {
+            color: transparent;
+        }
+
+        input:checked+label::first-letter {
+            color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="radio" id="on" name="status" value="on" checked>
+        <label for="on">On</label>
+        <input type="radio" id="off" name="status" value="off">
+        <label for="off">Off</label>
+    </form>
+
+</body>
+
+</html>
